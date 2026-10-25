@@ -30,6 +30,11 @@ The flow runs in the current working directory. It initializes Git, then creates
 
 Because this snapshot runs Git commands and changes the project in place, inspect the source and ensure the target project's working tree is backed up before running it. The old README points to the Friendly TNSVue CLI, but the repository itself declares no CLI binary; verify package compatibility before combining it with another archived CLI. Its package lint script also uses ESLint with --fix and can modify files.
 
+
+### Commit history
+
+The repository began on April 23, 2019, as a small JavaScript migration project. Its May commits assembled the interactive workflow in stages: package-manager helpers and prompts came first, followed by preparation, file updates, CSS-to-layout conversion, template generation, and cleanup. The [initial commit](https://github.com/friendly-tnsvue/friendly-tnsvue_old-migration-service/commit/8671b30), the [file-update stage](https://github.com/friendly-tnsvue/friendly-tnsvue_old-migration-service/commit/3525112), and the [template stage](https://github.com/friendly-tnsvue/friendly-tnsvue_old-migration-service/commit/f97dce0) show that progression. The project reached its [v0.12.1 release](https://github.com/friendly-tnsvue/friendly-tnsvue_old-migration-service/commit/c968fb1) in May. Its latest recorded commit, from August 23, was a dependency update rather than a new migration capability ([commit](https://github.com/friendly-tnsvue/friendly-tnsvue_old-migration-service/commit/84406dc)).
+
 ## Plugin prototype 01
 
 Repository: [friendly-tnsvue_vue-plugin_01](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_01)
@@ -38,11 +43,21 @@ This experiment separates layout and label components and includes a helper inte
 
 The main install function calls a register function, but that function is empty in this snapshot. As a result, installing the package currently registers none of the draft components. The package also has no build or test scripts. Treat it as design material to inspect, not as a usable plugin. The 01 suffix is a prototype label, not a v1 release.
 
+
+### Commit history
+
+This prototype's history is concentrated on March 26, 2019. It began with a component-registration skeleton, then added a registration helper and separate drafts for labels and layouts ([registration](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_01/commit/eb21ea1), [labels](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_01/commit/01838f4), [layouts](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_01/commit/34059d7)). The final recorded changes combine those experiments, but the main registration function remained empty. The commit sequence therefore documents component ideas, not a completed registration pipeline.
+
 ## Plugin prototype 02
 
 Repository: [friendly-tnsvue_vue-plugin_02](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_02)
 
 This repository contains only a README that points to the Vue plugin; it has no package manifest or implementation files. The preserved implementation is documented in [friendly-tnsvue-vue-plugin-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-vue-plugin-v0). The 02 suffix identifies this pointer snapshot and does not indicate a v2 implementation.
+
+
+### Commit history
+
+The repository started on March 29, 2019, with plugin registration work, then added label and layout experiments ([initial commit](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_02/commit/68c1409), [registration helper](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_02/commit/bc58350), [layout draft](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_02/commit/8e6934f)). On April 20, the [moved info commit](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_02/commit/042f30b) removed the package manifest and implementation files, leaving a README pointer. That history explains why the repository is now README-only and why its earlier experiments should be treated as superseded by the preserved v0 plugin.
 
 ## v0: CLI
 
@@ -59,6 +74,11 @@ ftns migrate
 
 The command runs locally and delegates through the Gluegun toolbox. It is not an HTTP client and does not call a hosted service. This CLI declares a dependency on migration-service 0.7.0-beta. Its build script compiles TypeScript, but also runs formatting and lint steps from the archived package configuration.
 
+
+### Commit history
+
+The CLI began as a Gluegun project on August 6, 2019. The [migrate command](https://github.com/friendly-tnsvue/ftns-cli/commit/235493d) and service integration followed three days later. Later changes added small command helpers and upgraded Gluegun, then replaced an environment-specific service import with the declared package dependency ([dependency integration](https://github.com/friendly-tnsvue/ftns-cli/commit/ce57417)). The recorded line ends at [v0.2.1](https://github.com/friendly-tnsvue/ftns-cli/commit/867ba6d) on December 10, 2019. The history is mostly the assembly of a thin command-line entry point around the separate migration service.
+
 ## v0: TypeScript migration service
 
 Repository: [friendly-tnsvue-migration-service-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-migration-service-v0)
@@ -72,6 +92,11 @@ Before migration, the service runs lint --fix and adds the runtime and developme
 The engine operates on the project directory represented by the toolbox and uses Gluegun prompts, filesystem and template helpers, plus package-manager commands. The configuration and model layers supply the operations executed by each stage. A direct integration must call the service with a compatible Gluegun toolbox; a plain Node object is not sufficient.
 
 For the usual CLI flow, install the historical CLI and run ftns migrate from the Vue project root. In the service repository, yarn test runs the AVA tests and yarn build prepares and bundles the package. The archived build preparation includes formatting commands that can rewrite source files.
+
+
+### Commit history
+
+The service began on August 8, 2019, and grew from a basic package into a staged workflow. August commits added Git setup, prompts, package-manager handling, project preparation, file transformations, and finish-time templates. Later work added DOM helpers and router support, then changed the bundling setup and added tests. In November, the service gained a package.json-only mode and conversion of text nodes into NativeScript FormattedString and Span elements ([package-only mode](https://github.com/friendly-tnsvue/friendly-tnsvue-migration-service-v0/commit/127cfa7), [text conversion](https://github.com/friendly-tnsvue/friendly-tnsvue-migration-service-v0/commit/4fe1768)). A December commit marked v0.7.0-beta as unreleased. In January 2020, a [configuration refactor](https://github.com/friendly-tnsvue/friendly-tnsvue-migration-service-v0/commit/bd3e1a6) moved migration-specific behavior toward configurable models, an architectural direction carried into the v1 monorepo. Later history is largely dependency maintenance, with the latest recorded update in October 2020.
 
 ## v0: Vue plugin
 
@@ -94,6 +119,11 @@ Vue.use(FriendlyTnsVue)
 ~~~
 
 The plugin registers components with the local Vue instance; it is not a migration engine and does not make a web HTML renderer available. Its package metadata targets the older Vue and NativeScript ecosystem, so check the application's versions before using it.
+
+
+### Commit history
+
+The plugin started on April 21, 2019, and added its div and p components the following day. Subsequent commits expanded lStyle parsing and layout mapping. The implementation briefly moved to TypeScript in July, then returned to JavaScript in October; that final iteration removed span, added a CSS-string parser, and fixed Vue component extension ([JavaScript return](https://github.com/friendly-tnsvue/friendly-tnsvue-vue-plugin-v0/commit/acbf748), [v0.7 release](https://github.com/friendly-tnsvue/friendly-tnsvue-vue-plugin-v0/commit/c55d7c2)). Feature work ended in October 2019. Later commits updated dependencies, with the last recorded update in February 2021.
 
 ## v1: monorepo
 
@@ -123,3 +153,8 @@ ftns migrate
 ~~~
 
 The generic model asks for project paths and the application ID, and asks which package-manager mode to use. The migration can run lint with --fix, install dependencies, and rewrite project files. Review the target project's Git status and generated changes before accepting the result. Package scripts and dependencies are from an archived toolchain; check their side effects before running build or formatting commands.
+
+
+### Commit history
+
+The monorepo was initialized on January 23, 2020, as the migration service was being reshaped around configurable models. Early commits separated the models into their own package and added model selection to the CLI ([model package](https://github.com/friendly-tnsvue/friendly-tnsvue-v1/commit/a6b9c5c), [CLI selection](https://github.com/friendly-tnsvue/friendly-tnsvue-v1/commit/a3755d3)). Follow-up refactoring moved project-specific responsibilities into those configurations. The repository published alpha snapshots, reaching [1.1.1-alpha.0](https://github.com/friendly-tnsvue/friendly-tnsvue-v1/commit/0c9ac53) in January. The latest recorded commit is an October 2020 dependency update, so the history shows a short period of architectural development followed by dependency maintenance.
