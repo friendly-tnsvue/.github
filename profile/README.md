@@ -1,27 +1,55 @@
 # Friendly TNSVue
 
-Friendly TNSVue is a collection of tools and experiments for using Vue with NativeScript. These repositories are historical snapshots and are archived.
+Friendly TNSVue is a collection of tools and experiments for using Vue with NativeScript. All repositories listed here are archived historical snapshots.
 
 ## Projetos
 
-- [friendly-tnsvue-v1](https://github.com/friendly-tnsvue/friendly-tnsvue-v1) reúne em um monorepositório a CLI, o serviço de migração e modelos de projetos.
-- [ftns-cli](https://github.com/friendly-tnsvue/ftns-cli) oferece a interface de linha de comando para executar a migração e utiliza o serviço de migração.
-- [friendly-tnsvue-migration-service-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-migration-service-v0) contém uma versão histórica em TypeScript do serviço que migra projetos Vue para NativeScript.
-- [friendly-tnsvue_old-migration-service](https://github.com/friendly-tnsvue/friendly-tnsvue_old-migration-service) contém uma implementação histórica anterior do serviço de conversão, em JavaScript.
-- [friendly-tnsvue-vue-plugin-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-vue-plugin-v0) contém um plugin Vue com componentes e adaptações de layout para NativeScript-Vue.
-- [friendly-tnsvue_vue-plugin_01](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_01) é um protótipo inicial do plugin Vue.
-- [friendly-tnsvue_vue-plugin_02](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_02) é um repositório histórico cujo README aponta para o plugin Vue.
+### v1
 
-O repositório [nsvue-colors](https://github.com/guesant/nsvue-colors), um aplicativo NativeScript relacionado, permanece no perfil pessoal de [@guesant](https://github.com/guesant).
+| Repositório | Descrição |
+| --- | --- |
+| [friendly-tnsvue-v1](https://github.com/friendly-tnsvue/friendly-tnsvue-v1) | Monorepositório que reúne a CLI, o serviço de migração e modelos de projetos. |
+
+### v0
+
+| Repositório | Descrição |
+| --- | --- |
+| [ftns-cli](https://github.com/friendly-tnsvue/ftns-cli) | CLI da linha 0.x. Usa o serviço de migração para converter projetos Vue para NativeScript. |
+| [friendly-tnsvue-migration-service-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-migration-service-v0) | Serviço histórico em TypeScript para migrar projetos Vue para NativeScript. |
+| [friendly-tnsvue-vue-plugin-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-vue-plugin-v0) | Plugin Vue com componentes e adaptações de layout para NativeScript-Vue. |
+
+### Implementações anteriores e protótipos
+
+Estes repositórios não indicam uma versão principal v1 ou v2 no nome. Os sufixos 01 e 02 identificam protótipos do plugin.
+
+| Repositório | Descrição |
+| --- | --- |
+| [friendly-tnsvue_old-migration-service](https://github.com/friendly-tnsvue/friendly-tnsvue_old-migration-service) | Implementação histórica do serviço de conversão em JavaScript. |
+| [friendly-tnsvue_vue-plugin_01](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_01) | Protótipo inicial do plugin Vue. |
+| [friendly-tnsvue_vue-plugin_02](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_02) | Repositório de protótipo cujo README aponta para o plugin Vue. |
 
 ## Projects
 
-- [friendly-tnsvue-v1](https://github.com/friendly-tnsvue/friendly-tnsvue-v1) is a monorepo containing the CLI, migration service, and project models.
-- [ftns-cli](https://github.com/friendly-tnsvue/ftns-cli) provides the command-line interface for migrations and uses the migration service.
-- [friendly-tnsvue-migration-service-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-migration-service-v0) is a historical TypeScript version of the service that migrates Vue projects to NativeScript.
-- [friendly-tnsvue_old-migration-service](https://github.com/friendly-tnsvue/friendly-tnsvue_old-migration-service) is an earlier historical JavaScript implementation of the conversion service.
-- [friendly-tnsvue-vue-plugin-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-vue-plugin-v0) contains a Vue plugin with components and layout adaptations for NativeScript-Vue.
-- [friendly-tnsvue_vue-plugin_01](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_01) is an early prototype of the Vue plugin.
-- [friendly-tnsvue_vue-plugin_02](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_02) is a historical repository whose README points to the Vue plugin.
+### v1
 
-The related [nsvue-colors](https://github.com/guesant/nsvue-colors) NativeScript app remains on [@guesant](https://github.com/guesant)'s personal profile.
+| Repository | Description |
+| --- | --- |
+| [friendly-tnsvue-v1](https://github.com/friendly-tnsvue/friendly-tnsvue-v1) | Monorepo containing the CLI, migration service, and project models. |
+
+### v0
+
+| Repository | Description |
+| --- | --- |
+| [ftns-cli](https://github.com/friendly-tnsvue/ftns-cli) | CLI from the 0.x line. It uses the migration service to convert Vue projects to NativeScript. |
+| [friendly-tnsvue-migration-service-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-migration-service-v0) | Historical TypeScript service for migrating Vue projects to NativeScript. |
+| [friendly-tnsvue-vue-plugin-v0](https://github.com/friendly-tnsvue/friendly-tnsvue-vue-plugin-v0) | Vue plugin with components and layout adaptations for NativeScript-Vue. |
+
+### Earlier implementations and prototypes
+
+These repositories do not indicate a major v1 or v2 version in their names. The 01 and 02 suffixes identify plugin prototypes.
+
+| Repository | Description |
+| --- | --- |
+| [friendly-tnsvue_old-migration-service](https://github.com/friendly-tnsvue/friendly-tnsvue_old-migration-service) | Historical JavaScript implementation of the conversion service. |
+| [friendly-tnsvue_vue-plugin_01](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_01) | Early Vue plugin prototype. |
+| [friendly-tnsvue_vue-plugin_02](https://github.com/friendly-tnsvue/friendly-tnsvue_vue-plugin_02) | Prototype repository whose README points to the Vue plugin. |
